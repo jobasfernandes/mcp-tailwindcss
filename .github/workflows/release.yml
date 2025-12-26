@@ -53,7 +53,7 @@ jobs:
         id: bump
         run: |
           npm version ${{ github.event.inputs.version }} -m "chore(release): %s"
-          echo "version=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
+          echo "version=$(node -p \"require('./package.json').version\")" >> $GITHUB_OUTPUT
           git push
           git push --tags
 
