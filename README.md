@@ -120,6 +120,24 @@ Adicione ao seu `settings.json`:
 |------------|-----------|
 | `tailwind_integracoes` | Guias de integração com frameworks |
 
+### 🎨 Referência de Classes
+
+| Ferramenta | Descrição |
+|------------|-----------|
+| `tailwind_utilities` | Lista completa de utilities por categoria (layout, flexbox, grid, spacing, typography, etc.) |
+| `tailwind_variants` | Todos os variants/modificadores (hover, focus, responsive, dark, etc.) |
+| `tailwind_cores` | Paleta completa de cores com valores hex (slate, gray, red, blue, etc.) |
+| `tailwind_spacing` | Escala de espaçamento (0-96, px, frações) |
+| `tailwind_breakpoints` | Breakpoints responsivos e container queries |
+
+### 🍳 Receitas e Padrões
+
+| Ferramenta | Descrição |
+|------------|-----------|
+| `tailwind_receitas` | Receitas prontas de componentes (button, card, form, modal, navbar, hero, grid, alert, etc.) |
+| `tailwind_migracao_v4` | Guia de migração v3 → v4 (breaking changes, nova sintaxe, etc.) |
+| `tailwind_boas_praticas` | Boas práticas (organização, componentes, performance, responsivo, dark mode, etc.) |
+
 ---
 
 ## 🎨 Integração com Frameworks
