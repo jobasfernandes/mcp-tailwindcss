@@ -1527,7 +1527,7 @@ async function main() {
   
   const transport = new StdioServerTransport()
   await mcpServer.connect(transport)
-  console.error('MCP Tailwind CSS server v2.0.0 running on stdio')
+  console.error('MCP Tailwind CSS server v1.0.0 running on stdio')
 
   if (AUTO_UPDATE_ENABLED) {
     const initialCheck = await checkForUpdates()
