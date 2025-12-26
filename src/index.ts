@@ -7,6 +7,7 @@ import {
   ListResourcesRequestSchema,
   ReadResourceRequestSchema,
 } from '@modelcontextprotocol/sdk/types.js'
+import { createRequire } from 'node:module'
 import * as fs from 'fs'
 import * as path from 'path'
 import { fileURLToPath } from 'url'
@@ -28,6 +29,9 @@ import {
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
+
+const require = createRequire(import.meta.url)
+const APP_VERSION = (require('../package.json') as { version?: string }).version ?? '0.0.0'
 
 let TAILWIND_SRC_PATH = process.env.TAILWIND_SRC_PATH || ''
 
@@ -56,7 +60,7 @@ const CATEGORY_LABELS: Record<ExtractedKind, string> = {
 const mcpServer = new McpServer(
   {
     name: 'mcp-tailwindcss',
-    version: '1.0.0',
+    version: APP_VERSION,
   },
   {
     capabilities: {
@@ -4107,7 +4111,7 @@ async function main() {
   
   const transport = new StdioServerTransport()
   await mcpServer.connect(transport)
-  console.error('MCP Tailwind CSS server v1.0.0 running on stdio')
+  console.error(`MCP Tailwind CSS server v${APP_VERSION} running on stdio`)
 
   if (AUTO_UPDATE_ENABLED) {
     const initialCheck = await checkForUpdates()
