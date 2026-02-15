@@ -1,6 +1,6 @@
 {
   "name": "mcp-tailwindcss",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "MCP Server para contexto completo da biblioteca Tailwind CSS v3/v4 - Utilities, Config, Theme, Plugins, Integrações com Vite, Next.js, Nuxt, Astro. Inclui receitas de componentes, guias de migração e boas práticas. Auto-download do repositório oficial na primeira execução.",
   "type": "module",
   "main": "dist/index.js",
